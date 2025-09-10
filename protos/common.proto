@@ -1,0 +1,12 @@
+syntax = "proto3";
+package protob;
+option go_package = "../afternewtige/app/protob/";
+
+message BaseCommon{
+  int32 code = 1;
+  string msg = 2;
+}
+
+message GameNoted{
+  int32 gameId = 1;
+}

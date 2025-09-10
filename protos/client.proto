@@ -1,0 +1,13 @@
+syntax = "proto3";
+package protob;
+option go_package = "../afternewtige/app/protob/";
+
+message LoginReq{
+  string deviceId = 1; //设备ID
+  int32 gameId = 2;  //游戏ID
+}
+
+
+message SpinReq{
+  int32 gameId = 1;
+}

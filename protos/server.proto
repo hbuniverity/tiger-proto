@@ -1,0 +1,50 @@
+syntax = "proto3";
+package protob;
+option go_package = "../afternewtige/app/protob/";
+
+import "common.proto";
+
+message RpcMsgRes{
+  int32 code = 1;
+}
+
+message LoginRes{
+  BaseCommon base = 1;
+  PlayerInfo player = 2;
+  GameInfo gameInfo = 7;  //游戏数据
+  TaskInfo task = 8;      //任务活动
+}
+
+message PlayerInfo{
+  string playerId = 1;  //玩家ID
+  string username = 2;  //昵称
+  string deviceId = 3;  //设备ID
+  int64 coin = 4;   //金币
+  double cash = 5;   //现金
+  int64 spinCount = 6;  //剩余次数
+}
+
+message GameInfo{
+    GameJackpot jackpot = 1; //彩金
+    double AccruedJackpot = 2;  //累计彩金
+}
+
+message GameJackpot{
+  double small = 1;  //小奖
+  double winner = 2;  //中奖
+  double award = 3;   //大奖
+  double prize = 4;   //巨奖h
+}
+
+message TaskInfo{
+
+}
+
+// 下注返回
+message SpinRes{
+  int32 code = 1;
+}
+
+message RewardResult{
+  repeated int32 results = 1;  //开奖列表  N行结果汇合到一行
+}

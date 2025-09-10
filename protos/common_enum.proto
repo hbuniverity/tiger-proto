@@ -1,0 +1,3 @@
+syntax = "proto3";
+package protob;
+option go_package = "../afternewtige/app/protob/";

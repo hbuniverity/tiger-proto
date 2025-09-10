@@ -1,0 +1,10 @@
+syntax = "proto3";
+package protob;
+option go_package = "../afternewtige/app/protob/";
+
+enum ServiceRouteKey{
+  INVALID_PROTO = 0;         // 无效的协议
+  //请求消息
+  ConnEnter = 1;             //玩家Connector 登陆
+  Spin = 2;                  //下注
+}

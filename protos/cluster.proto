@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package protob;
+option go_package = "../afternewtige/app/protob/";
+
+message Notices{
+  oneof message{
+      LoginSysNotice LoginSysNotice = 1;
+  }
+}
+
+message LoginSysNotice{
+
+}
+
+message RpcOfflineReq{
+  string playerId = 1;
+  int32 gameId = 2;
+}
+
+message RpcRes{
+  int32 code = 1;
+}

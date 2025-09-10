@@ -1,0 +1,18 @@
+syntax = "proto3";
+package protob;
+option go_package = "../afternewtige/app/protob/";
+
+import "cluster.proto";
+
+//[单播]消息广播RPC请求
+message UnicastMsg{
+  string route = 1;
+  map<string,Notices> usersMsg = 2;
+}
+
+//[群播]消息广播RPC请求
+message MulticastMsg{
+  string route = 1;
+  repeated string uids = 2;
+  Notices notice = 3;
+}

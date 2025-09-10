@@ -1,0 +1,14 @@
+syntax = "proto3";
+package protob;
+option go_package = "../afternewtige/app/protob/";
+
+enum ErrorCode{
+  ErrorCode_None = 0;
+  ErrorCode_Successful = 200;
+
+  ErrorCode_NotPlayer = 1;  //找不到玩家信息
+  ErrorCode_LoginFailed = 2; //登录失败
+  ErrorCode_PlayerNotInGame = 3; //玩家不在游戏内
+  ErrorCode_NoSpinCount = 4;    //旋转次数不足
+}
+
